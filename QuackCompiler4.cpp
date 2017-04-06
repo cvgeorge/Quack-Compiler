@@ -1,6 +1,6 @@
 //============================================================================
-// Name        : QuackCompiler2.cpp
-// Author      : Roscoe Casita and Connor George
+// Name        : QuackCompiler4.cpp
+// Author      : Connor George and Roscoe Casita
 // Version     :
 // Copyright   : University of Oregon
 // Description : Compiler for CIS 561. This build is with complete makefile.
