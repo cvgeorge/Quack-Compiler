@@ -1,0 +1,19 @@
+"Give me a small number!".PRINT();
+
+sm_number = 0;
+
+sm_number.READ();
+
+"Give me a BIG number!".PRINT();
+
+bg_number = 0;
+
+bg_number.READ();
+
+
+while(bg_number >= sm_number)
+{
+	("Countdown: "+ bg_number.STR()).PRINT();
+	bg_number = bg_number - 1;
+}
+

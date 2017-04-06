@@ -1,0 +1,24 @@
+number1 = 10;
+number2 = 5;
+
+plus_val = number1 + number2;
+minus_val = number1 - number2;
+times_val = number1 * number2;
+divide_val = number1 / number2;
+
+greater_val = number1 > number2;
+greater_equal_val = number1 >= number2;
+less_val = number1 < number2;
+less_equal_val = number1 <= number2;
+equal_val = number1 == number2;
+
+plus_val.PRINT();
+minus_val.PRINT();
+times_val.PRINT();
+divide_val.PRINT();
+
+greater_val.PRINT();
+greater_equal_val.PRINT();
+less_val.PRINT();
+less_equal_val.PRINT();
+equal_val.PRINT();

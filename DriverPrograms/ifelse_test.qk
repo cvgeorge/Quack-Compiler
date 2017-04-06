@@ -1,0 +1,45 @@
+if(true and false)
+{
+	if(false or true)
+	{
+		"If 1 Nested 1".PRINT();
+	}
+	elif(10 > 3)
+	{
+		"If 1 Nested 2".PRINT();
+	}
+	else
+	{
+		"If 1 Nested 3".PRINT();
+	}
+}
+elif("goodbye" == "goodbye")
+{
+	if(false or false)
+	{
+		"If 2 Nested 1".PRINT();
+	}
+	elif(10 < 3)
+	{
+		"If 2 Nested 2".PRINT();
+	}
+	else
+	{
+		"If 2 Nested 3".PRINT();
+	}
+}
+else
+{
+	if(false or true)
+	{
+		"If 3 Nested 1".PRINT();
+	}
+	elif(10 > 3)
+	{
+		"If 3 Nested 2".PRINT();
+	}
+	else
+	{
+		"If 3 Nested 3".PRINT();
+	}
+}

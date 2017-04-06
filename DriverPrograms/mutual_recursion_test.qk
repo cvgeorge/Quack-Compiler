@@ -1,0 +1,27 @@
+class MutualRecursion(){
+	
+	def even_numbers(num : Int)
+	{
+		if(num <= 0)
+		{
+			return;
+		}
+		num.PRINT();
+		odd_numbers(num - 1);
+	}
+
+	def odd_numbers(num : Int)
+	{
+		if(num <= 0)
+		{
+			return;
+		}
+		num.PRINT();
+		even_numbers(num - 1);
+
+	}
+}
+
+mr = MutualRecursion();
+
+mr.even_numbers(10);

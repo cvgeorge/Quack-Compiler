@@ -1,0 +1,6 @@
+class Example(){
+	a = 5;
+	a = this.b;
+}
+
+test = Example();

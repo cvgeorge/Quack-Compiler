@@ -1,0 +1,295 @@
+/**
+* A simple sample Quack program
+*
+*/
+
+
+class Treta() extends Obj
+{
+	this.x = 5;
+	this.z = 0;
+	this.y = 1;
+
+
+	def test3(): Obj
+	{
+		if(this.x < 10)
+		{
+			return false;
+		}
+		elif(this.z == this.z)
+		{
+			return 5;
+		}
+		elif(this.y == this.z)
+		{
+			return true;
+		}
+		else
+		{
+			return 1;
+		}
+	
+		return 0;
+	}
+
+	def foo(): Int
+	{
+		return 0;
+	}
+	def test1(): Obj
+	{
+		this.y = this.x;
+		foo();
+		return 0;
+	}
+
+	def test2(): Obj
+	{
+		while( this.x == this.x )
+		{
+			return 1;
+			while(this.x == this.y)
+			{
+				return 1;
+			}
+		}
+		return 0;
+	}
+}
+
+class Pt(xx: Int, yy: Int) 
+{
+	this.x = xx;
+	this.y = yy;
+
+
+	def anewtest()
+	{
+		return ;
+	}	
+	def PLUS(other: Pt) : Pt 
+	{
+		return Pt(this.x + other.x, this.y + other.y);
+	}
+	
+	def _x() : Int 
+	{ 
+		return this.x; 
+	}
+
+	def _y() : Int
+	{
+		return this.y; 
+	}
+	def STR():Str
+	{
+		return "X: " + this.x.STR() + " Y: " + this.y.STR();
+	}
+}
+
+class Top(x:Int)
+{
+	"class Top(x:Int)".PRINT();
+	this.abc = x;
+
+	def foo():Int
+	{
+		"def Top foo():Int".PRINT();
+		return this.abc;
+	}
+	def forever():Top
+	{
+		this.abc = this.abc -1;
+		"forever in () TOP!".PRINT();
+		return this;
+	}
+	def test():Int
+	{
+		return this.abc;
+	}
+}
+
+class Middle(x:Int, y:Int) extends Top
+{
+	"class Middle(x:Int, y:Int) extends Top".PRINT();
+	this.abc = x;
+	this.xyz = y;
+
+	def foo():Int
+	{
+		"def Middle foo():Int".PRINT();
+		return Middle(this.abc + this.xyz,0).abc;
+	}
+	def forever():Top
+	{
+		this.abc = 2;
+		" in Middle Onece!".PRINT();
+		return this;
+	}
+}
+
+class Bottom(x:Int, y:Int, z:Int) extends Middle
+{
+	"class Bottom(x:Int, y:Int, z:Int) extends Middle".PRINT();
+	this.defer = z;
+	this.xyz = y;
+	this.abc = x;
+
+	this.test = z;
+
+
+	def bar():Int
+	{
+		"def Bottom bar():Int".PRINT();
+		this.xyz = this.xyz * this.xyz;
+		return foo();
+	}
+	def boolTest():Boolean
+	{
+		"def boolTest():Boolean".PRINT();
+		return false or (true and not false);
+	}
+	def forever():Middle
+	{
+		this.abc = 3;
+		" in Bottom Onece!".PRINT();
+		return this;
+	}
+	def RunAlways():Bottom
+	{
+		if(this.abc > -1)
+		{
+			this.abc = this.abc -1;
+		}
+		else
+		{
+			return this;
+		}
+		"Infinite Recurson".PRINT();
+		return RunAlways();
+	}
+}
+
+" a = Top(12);".PRINT();
+a = Top(12);
+"b = Middle(13,14);".PRINT();
+b = Middle(13,14);
+"c = Bottom(15,16,17);".PRINT();
+c = Bottom(15,16,17);
+
+"xyz.foo().PRINT();".PRINT();
+a.foo().PRINT();
+"b.foo().PRINT();".PRINT();
+b.foo().PRINT();
+"c.foo().PRINT();".PRINT();
+c.foo().PRINT();
+"c.bar().PRINT();".PRINT();
+c.bar().PRINT();
+"c.boolTest().PRINT();".PRINT();
+c.boolTest().PRINT();
+"done.".PRINT();
+
+
+
+"Printing D Start".PRINT();
+d = Bottom(1,2,3);
+
+while(d.test() > -5)
+{
+	("Printing d" + d.test().STR() + " value").PRINT();
+	d = d.forever();
+}
+
+"Loops appear to work.".PRINT();
+
+
+if( 1 < d.test())
+{
+	"First If Block".PRINT();
+	
+}
+elif( 1 == d.test())
+{
+	"second If Block".PRINT();
+}
+elif( 1 <= d.test())
+{
+	"thrirs If Block".PRINT();
+}
+else
+{
+	"How did we get here?".PRINT();
+}
+
+if(true)
+{
+	"Error".PRINT();
+}
+
+"After If Block".PRINT();
+
+e = Bottom(10,2,3);
+
+e.RunAlways();
+
+
+
+if( 3 < 5 and 14 >1 )
+{
+	"Good Result.".PRINT();
+}
+
+
+
+abc = 5;
+
+"Waiting for User Input, enter a number:".PRINT();
+abc.READ();
+
+while(abc > 5)
+{
+	abc = abc-1;
+	"Input Test Complete.".PRINT();
+}
+
+
+xyz = "Hello";
+
+xyz.PRINT();
+
+xyza = "world";
+xyza.READ();
+
+(xyz + xyza).PRINT();
+
+
+Obj().PRINT();
+
+
+
+
+//a = A(5);
+//b = B(5,3);
+
+//alpha = Alph();
+
+//treta = Treta();
+
+
+a_point = Pt(3,4);
+b_point = Pt(10,100);
+
+c_point = a_point + b_point;
+
+c_point.PRINT();
+
+
+
+
+
+
+
+
+
+

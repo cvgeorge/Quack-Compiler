@@ -1,0 +1,208 @@
+#####################################################
+#                                                   #
+#       Authors - Roscoe Casita                     #
+#                 Connor George                     #
+#                                                   #
+#       Quack Language Compiler                     #
+#                                                   #
+#####################################################
+
+DESCRIPTION:
+
+    This file is intended to familiarize you with the
+functionality of the Quack Language Compiler.  Each
+piece of functionality has a provided sample file
+which demonstrates this feature.  This README will
+first describe the additional quack functionality
+that has been provided, and will then provide
+documentation on the various sample files that
+demonstrate this functionality.
+
+
+ADDITIONAL FUNCITONALITY:
+
+    User Input - Two built-in functions have been
+    added to the quack compiler.  Both are called
+    READ(), and are member functions of the built in
+    classes String and Int.  Calling these functions
+    will allow the user to provide input to the 
+    program and store the input in the corresponding
+    variable.  For example, myInt.READ() will accept
+    user input for an integer and store that integer
+    in the myInt variable.  
+
+    Remote Assignment - Remote assignment refers
+    to the assignment of member variables for foreign
+    classes.  In other words, you can assign a variable
+    from a class inside another non-inherited class.
+    This allows for the manipulation of data in other
+    classes in a way similar to having "public" data
+    members in C++.
+
+    Function, Error, and Variable Logging - By passing 
+    the flags "-f", "-e" "-v" to the compiler, function, 
+    error, and variable logging can be enabled or 
+    disabled.  Logging can be very useful for debugging
+    purposes, particularly for anyone who wished to 
+    extend the functionality of the compiler.  It also
+    could be useful for someone debugging their
+    quack program, but is much more suited towards
+    the compiler development.
+
+    Graphviz Semantic/Program Structure - By passing the
+    flags "-s" and "-p" to the compiler, visualizations
+    of the program can be generated.  The "-s" flag
+    generates a tree of the syntactic structure of the 
+    program.  This view displays the actual syntax of 
+    the program that was written.  The "-f" flag 
+    generates a tree of the semantic program structure.
+    This view shows the actual meaning of the program
+    structure, and also includes visualization of the
+    default classes.
+
+KNOWN DEFECTS:
+
+Defect 1 -
+{
+    Assignment to a member variable of that is the
+    result of a function call.  For example,
+    
+    this.foo().abc = 10;  
+
+    When foo() returns a class of type "this".
+    This generates a bad executable.
+
+    a = this.foo().abc; // This is correctly handled
+}
+
+Defect 2 - 
+{
+    Detection of uninitialized member variables in
+    a constructor that contains variables with the
+    same name.  For example,
+
+    a = 5;
+    a = this.a; // Our system doesn't catch this.
+                // Bad executables are generated.
+
+    a = 5;
+    a = this.b; // Our system DOES catch this.
+}
+
+
+DRIVER PROGRAMS:
+
+----------------------------------------------------
+
+THIS LOOKUP
+
+    Filename - this_difference_test.qk
+
+    Description - This demonstrates that the use of
+    the "this" does not hinder functionality.  Type
+    checking still catches the uninitialized variable.
+    Note that this program is not intended to compile
+    properly.
+
+    Demonstrated Functionality - the "this",
+    uninitialized variable type checking
+ 
+----------------------------------------------------
+
+USER INPUT
+
+    Filename - read_test.qk
+
+    Description - This file performs a simple
+    addition on two numbers.  The numbers are 
+    provided by the user, demonstrating the ability
+    for the user to input values.
+
+    Demonstrated Functionality - user input, PLUS,
+    string output
+
+----------------------------------------------------
+
+RECURSION/MUTUAL RECURSION
+
+    Filenames - recursion_test.qk
+                mutual_recursion_test.qk
+
+    Description - These files demonstrate recursive
+    function calls.  recursion_test.qk includes a
+    recursive factorial function, and 
+    mutual_recursion.qk includes a simple set of
+    countdown functions that are mutually recursive.
+
+    Demonstrated Functionality - recursion, mutual
+    recursion, "empty" return statements, single if
+    statements, function calls
+
+----------------------------------------------------
+
+DYNAMIC DISPATCH TYPE CHANGING
+
+    Filename - inheritance_walk_test.qk
+
+    Description - This file demonstrates class
+    polymorphism.  A variable is constantly updated
+    to a new type as the loop "walks" up the 
+    inheritance chain.
+
+    Demonstrated Functionality - class type walking,
+    loops, polymorphism
+
+----------------------------------------------------
+
+NESTED IF/ELIF/ELSE AND WHILE STATEMENTS
+
+    Filename - if_else_while_test.qk
+
+    Description - This file demonstrates nested if,
+    elif, else, and while structures.  It includes
+    a while loop with a nested if/elif/else structure.
+    The else clause then in turn includes its own
+    nested while loop, which also has a nested
+    if/elif/else structure inside it.  As the loops
+    execute, the if, elif, and else clauses will
+    all be entered.
+
+    Demonstrated Functionality - loops, if/elif/else,
+    nested loops, nested if/elif/else
+
+----------------------------------------------------
+
+MATH EXPRESSIONS
+
+    Filename - math_expression_test.qk
+
+    Description - This file demonstrates an example
+    of all the built-in math expressions.
+
+    Demonstrated Functionality - plus, minus, times,
+    divide, less than, less than or equal, greater
+    than, greater than or equal, equal to
+
+----------------------------------------------------
+
+BOOLEAN EXPRESSIONS
+
+    Filename - boolean_expression_test.qk
+
+    Description - This file demonstrates an example
+    of all the built-in boolean expressions.  All 
+    possible versions of these expressions have been
+    enumerated.
+
+    Demonstrated Functionality - AND, OR, NOT
+
+----------------------------------------------------
+
+STRING OPERATIONS
+
+    Filename - string_operations.qk
+
+    Description - This file demonstrates an example
+    of string concatenation.
+
+    Demonstrated Functionality - string concatenation

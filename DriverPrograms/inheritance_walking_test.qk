@@ -1,0 +1,45 @@
+class A()
+{
+	def foo() : A
+	{
+		"A Class".PRINT();
+		return this;
+	}
+}
+
+class B() extends A
+{
+	def foo() : A
+	{
+		"B Class".PRINT();
+		return A();
+	}
+}
+
+class C() extends B
+{
+	def foo() : B
+	{
+		"C Class".PRINT();
+		return B();
+	}
+}
+
+class D() extends C
+{
+	def foo() : C
+	{
+		"D Class".PRINT();
+		return C();
+	}
+}
+
+counter = 15;
+
+myClass = D();
+
+while(counter > 0)
+{
+	myClass = myClass.foo();
+	counter = counter - 1;
+}

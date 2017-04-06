@@ -1,0 +1,17 @@
+class Factorial()
+{
+	def fact(num : Int) : Int{
+		if(num <= 1)
+		{
+			return 1;
+		}
+		return num * fact(num - 1);
+		
+	}
+}
+
+fact_class = Factorial();
+
+result = fact_class.fact(7);
+
+result.PRINT();

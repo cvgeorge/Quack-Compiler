@@ -1,0 +1,51 @@
+if(true and true)
+{
+	"true and true".PRINT();
+}
+
+if(true and false)
+{
+	"true and false".PRINT();
+}
+
+if(false and true)
+{
+	"false and true".PRINT();
+}
+
+if(false and false)
+{
+	"false and false".PRINT();
+}
+
+
+if(true or true)
+{
+	"true or true".PRINT();
+}
+
+if(true or false)
+{
+	"true or false".PRINT();
+}
+
+if(false or true)
+{
+	"false or true".PRINT();
+}
+
+if(false or false)
+{
+	"false or false".PRINT();
+}
+
+
+if(not false)
+{
+	"not false".PRINT();
+}
+
+if(not true)
+{
+	"not true".PRINT();
+}

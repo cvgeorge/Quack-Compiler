@@ -1,0 +1,37 @@
+first_counter = 10;
+second_counter = 0;
+
+while(first_counter > 0)
+{
+	if(first_counter > 5)
+	{
+		"first_counter Value is large!".PRINT();
+	}
+	elif (first_counter <= 5 and first_counter > 1)
+	{
+		"first_counter Value is small".PRINT();
+	}
+	else
+	{
+		second_counter = 10;
+
+		while(second_counter > 0)
+		{
+			if(second_counter > 5)
+			{
+				"second_counter Value is large!".PRINT();
+			}
+			elif (second_counter <= 5 and second_counter > 1)
+			{
+				"second_counter Value is small".PRINT();
+			}
+			else
+			{
+				"final else statement".PRINT();
+			}
+			second_counter = second_counter - 1;
+		}
+
+	}
+	first_counter = first_counter - 1;
+}

@@ -1,0 +1,11 @@
+first_number = 0;
+second_number = 0;
+
+"Please enter the first number to add".PRINT();
+first_number.READ();
+
+"Please enter the second number to add".PRINT();
+second_number.READ();
+
+"The result of the add is: ".PRINT();
+(first_number + second_number).PRINT();
